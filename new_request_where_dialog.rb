@@ -6,17 +6,17 @@ def new_request_where_dialog
 end
 
 # Class that performs the actions for new service request page.
-class NewRequestWhereDialog < NewRequestDialogBase
+class NewRequestWhereDialog1 < NewRequestDialogBase
   include NewServiceRequestEntity
 
-  attr_accessor :account,
-                :yes_btn,
-                :no_btn,
-                :site
+  attr_accessor :account2,
+                :yes_btn2,
+                :no_btn2,
+                :site2
 
-  element :account, NewRequestWhereLocators::ACCOUNT
-  element :yes_btn, NewRequestWhereLocators::YES_BTN
-  element :no_btn, NewRequestWhereLocators::NO_BTN
+  element :account2, NewRequestWhereLocators::ACCOUNT
+  element :yes_btn2, NewRequestWhereLocators::YES_BTN
+  element :no_btn2, NewRequestWhereLocators::NO_BTN
 
   # Wrapper method of new request where dialog fields
   # @return [EntityObject]
@@ -26,25 +26,25 @@ class NewRequestWhereDialog < NewRequestDialogBase
 
   # Wrapper method of new request where dialog actions
   # @return [EntityObject]
-  def actions
+  def actions2
     return NewServiceRequestEntity.new_request_where_dialog_actions(self)
   end
 
   # Method that set value for site field
   # @param [String] site_value
-  def select_site_20(site_value)
+  def select_site_202(site_value)
     ui_manager.select_field(NewRequestWhereLocators::SITE, NewRequestWhereLocators::SITE_OPTIONS, site_value)
   end
 
   # Method that set value for account field.
   # @param [String] account_value
-  def select_account_25(account_value)
+  def select_account_253(account_value)
     ui_manager.select_field(NewRequestWhereLocators::ACCOUNT, NewRequestWhereLocators::ACCOUNT_OPTIONS, account_value)
   end
 
   # Method that select an option for site field
   # @param [String] site_option
-  def click_site_btn_without_Search_field(site_option)
+  def click_site_btn_without_Search_field4(site_option)
     site_option.eql?(UIConstants::YES) ? yes_btn.click : no_btn.click
   end
 end

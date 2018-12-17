@@ -6,11 +6,11 @@ def new_request_when_dialog
 end
 
 # Class that performs the actions for new service request page
-class NewRequestWhenDialog < NewRequestDialogBase
+class NewRequestWhenDialog1 < NewRequestDialogBase
   include NewServiceRequestEntity
 
-  attr_accessor :summary,
-                :scope_of_work,
+  attr_accessor :summary1,
+                :scope_of_work1,
                 :requested_start,
                 :requested_end,
                 :additional_site_details
@@ -23,19 +23,18 @@ class NewRequestWhenDialog < NewRequestDialogBase
 
   # Wrapper method of new request when dialog fields
   # @return [EntityObject]
-  def fields
+  def fields1
     return NewServiceRequestEntity.new_request_when_dialog_fields(self)
   end
 
-  def set_requested_start_13(value)
+  def set_requested_start_131(value)
     service_request.requested_start = DatesTimesUtility.convert_string_to_date_time_format(value)
     requested_end.click
     requested_end.set("")
   end
 
-  def set_requested_end_14(value)
+  def set_requested_end_141(value)
     service_request.requested_end = DatesTimesUtility.convert_string_to_date_time_format(value)
-    requested_end.click
     requested_end.set(service_request.requested_end)
   end
 end
