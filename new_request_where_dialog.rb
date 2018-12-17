@@ -32,19 +32,19 @@ class NewRequestWhereDialog < NewRequestDialogBase
 
   # Method that set value for site field
   # @param [String] site_value
-  def select_site(site_value)
+  def select_site_20(site_value)
     ui_manager.select_field(NewRequestWhereLocators::SITE, NewRequestWhereLocators::SITE_OPTIONS, site_value)
   end
 
   # Method that set value for account field.
   # @param [String] account_value
-  def select_account(account_value)
+  def select_account_25(account_value)
     ui_manager.select_field(NewRequestWhereLocators::ACCOUNT, NewRequestWhereLocators::ACCOUNT_OPTIONS, account_value)
   end
 
   # Method that select an option for site field
   # @param [String] site_option
-  def click_site_btn(site_option)
+  def click_site_btn_without_Search_field(site_option)
     site_option.eql?(UIConstants::YES) ? yes_btn.click : no_btn.click
   end
 end

@@ -27,17 +27,15 @@ class NewRequestWhenDialog < NewRequestDialogBase
     return NewServiceRequestEntity.new_request_when_dialog_fields(self)
   end
 
-  def set_requested_start(value)
+  def set_requested_start_13(value)
     service_request.requested_start = DatesTimesUtility.convert_string_to_date_time_format(value)
     requested_end.click
     requested_end.set("")
-    requested_start.set(service_request.requested_start)
   end
 
-  def set_requested_end(value)
+  def set_requested_end_14(value)
     service_request.requested_end = DatesTimesUtility.convert_string_to_date_time_format(value)
     requested_end.click
-    requested_end.set("")
     requested_end.set(service_request.requested_end)
   end
 end
