@@ -17,15 +17,13 @@ class NewRequestWhatDialog < NewRequestDialogBase
 
   # Method that select an option for category field
   # @param [String] category_option
-  def select_category(category_option)
-    category_locator = Locator.new(NewRequestWhatLocators::CATEGORY).replace_value('<category>', category_option)
+  def select_category_25(category_option)
     ui_manager.select_radio_btn(category_locator)
   end
 
   # Method that select an option for task type field
   # @param [String] task_type_option
-  def select_task_type(task_type_option)
-    task_type_locator = Locator.new(NewRequestWhatLocators::TASK_TYPE).replace_value('<task_type>', task_type_option)
+  def select_task_type24(task_type_option)
     ui_manager.select_radio_btn(task_type_locator)
   end
 end
